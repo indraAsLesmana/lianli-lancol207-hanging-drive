@@ -69,12 +69,18 @@ That is a ~1 minute cold swap. If you need true hot-swap, this bay is the wrong 
 
 ## Parts
 
-Caddy: **Dell G176J (0G176J) or 8FKXC (08FKXC / NTPP3)** 2.5" SFF carrier — the 3.0"-wide bay
-carrier that covers R610 / R710 / R620 / R720 / R630 / R730 (and the T-series). Adapter: an
-**SFF-8482 SAS 29-pin → SATA 22-pin** converter, *with an integral shielded data cable* if you
-can get one. Full BOM, part numbers and the two electrical gotchas (SAS non-medium errors and
-the 3.3 V / PWDIS spin-up problem) are in
-[`docs/parts-and-cabling.md`](docs/parts-and-cabling.md).
+Controller: **Dell PERC H200i** (owned) — a half-height PCIe 2.0 x8 card with 2 × SFF-8087, on the
+LSI SAS2008. It fits a normal PCIe slot; flash it to IT firmware.
+
+Carrier: **Dell G176J (0G176J) or 8FKXC (08FKXC / NTPP3)** 2.5" SFF carrier — the 3.0"-wide bay
+carrier that covers R610 / R710 / R620 / R720 / R630 / R730 (and the T-series).
+
+Cable: **one SFF-8087 fanout**, but which one is a real decision — **SFF-8087 → 4 × SFF-8482** if
+the drives go in bare (no adapters needed at all), or **SFF-8087 → 4 × SATA** if they stay in
+carriers and use the SFF-8482→SATA adapters. Adapter: prefer the variant with an **integral
+shielded cable**. Full BOM, part numbers, the adapter saddle that keeps the adapter tight to the
+carrier, and the two electrical gotchas (SAS non-medium errors; the 3.3 V / PWDIS spin-up trap) are
+in [`docs/parts-and-cabling.md`](docs/parts-and-cabling.md).
 
 ## Repo layout
 

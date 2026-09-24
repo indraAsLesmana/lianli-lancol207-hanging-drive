@@ -25,16 +25,22 @@ can be completed without guesswork.
 | # | Measure | How | Why |
 |---|---|---|---|
 | 6 | **Dell carrier**: outer L and H (W is known = 76.2 mm), plus the **rear opening's clear width/height** and how far the plastic corner wraps intrude | Caliper, one carrier | Confirms `CARRIER_L`/`CARRIER_H` (currently estimates: 122 / 20 mm) and proves the SFF-8482 plug clears the wraps. |
-| 7 | **SAS→SATA adapter**: rearward protrusion past the drive's connector face, body width, and the connector's height above the drive plane; plus the plug+bend radius you will actually use | Caliper + a cable bend | Sets the plenum depth (currently 25 mm adapter + 20 mm bend). |
+| 7 | **SAS→SATA adapter**: rearward protrusion past the drive's connector face, body width/height, **which way the cable leaves it**, and the plug+bend radius you will actually use | Caliper + a cable bend | Sets the saddle pocket and the plenum depth (currently 25 mm adapter + 20 mm bend). |
 | 8 | **Drive thickness**: 7 / 9.5 / 15 mm | Caliper | Sets `DRIVE_T`. SAS enterprise drives are usually 15 mm. |
 
 ---
 
 ## Also tell me
 
-* **HBA model and port type** (SFF-8087, SFF-8643, or individual SATA sockets) — decides the
-  breakout cable, and hence how much cable bulk the rear plenum has to swallow.
-* **Adapter variant**: 90° or 180°, PCB-only or integral cable.
+* ~~HBA model and port type~~ — **resolved: Dell PERC H200i, 2 × SFF-8087, PCIe 2.0 x8.** See
+  [`parts-and-cabling.md §2`](parts-and-cabling.md#2-the-controller-dell-perc-h200i) — the short
+  version is that it fits a normal PCIe slot, but you want IT firmware on it.
+* **Adapter variant**: 90° or 180°, PCB-only or integral cable, and which direction the cable
+  leaves it — this sets the saddle pocket and the plenum (item 7). **I could not read the photo you
+  attached: the vision service was saturated for this entire session.**
+* **Route A or Route B for v1** — bare drives with a SFF-8087→4×SFF-8482 breakout (no adapters at
+  all, dodges the non-medium-error gotcha), or drives in carriers with the adapters and a
+  SFF-8087→4×SATA fanout.
 * **Whether v1 (bare drives) is acceptable as the first build**, or whether the model should go
   straight to the carrier-ready envelope.
 

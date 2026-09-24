@@ -121,7 +121,10 @@ lets the SAS→SATA adapter plug onto it.
 
 **SFF-8482 → SATA adapter:** the PCB type is roughly 40 × 25 mm with a 20–30 mm rearward
 protrusion. A straight (180°) variant is the safe choice in a carrier — a 90° variant turns the
-cable sideways into the carrier's corner wraps.
+cable sideways into the carrier's corner wraps. Either way the adapter is **held tight to the
+carrier in a printed saddle** at the rear of each pocket, so the drive + carrier + adapter is one
+rigid cartridge that lifts in and out as a unit (see
+[parts-and-cabling.md §5](parts-and-cabling.md#5-holding-the-adapter-tight-to-the-carrier-your-requirement)).
 
 ### Why the drives cannot be arranged any other way
 
@@ -223,7 +226,10 @@ SLOT_FROM_FRONT = None   # front-most mount hole centre, from the front panel in
 SLOT_FROM_SIDE  = None   # front-most mount hole centre, from the inner side face
 BAY_DEPTH       = None   # vertical clearance, frame face down to obstruction
 CARRIER_W, CARRIER_L, CARRIER_H = 76.2, None, None   # W sourced (3.0" bay), L/H to measure
+ADAPTER_W, ADAPTER_H = None, None   # adapter body, for the saddle pocket
 ADAPTER_L       = None   # rearward protrusion of the SFF-8482->SATA adapter
+ADAPTER_EXIT    = None   # 180 straight / 90 sideways - sets the plenum direction
+SADDLE_LIP      = 1.2    # printed lip retaining the adapter against the carrier
 
 # --- drive ---
 DRIVE_W, DRIVE_L, DRIVE_T = 69.85, 100.45, 15.0   # SFF-8201 nominal; 15 mm for SAS
