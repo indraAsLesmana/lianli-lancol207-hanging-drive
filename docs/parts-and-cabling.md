@@ -141,7 +141,7 @@ the right instinct and it is a printed part, not a cable-tie job:
 * **A cable anchor** just behind the saddle (a slot for a zip tie or a printed clamp) so the data
   and power leads take the strain, not the connector. This is the direct mitigation for gotcha 1.
 * **Service access:** the saddle must be reachable with the lid off — it is, per the service model
-  in the [feasibility report](feasibility-lancool-207-top-bay.md#6-service-model--why-this-cannot-be-hot-swap).
+  in the [feasibility report](feasibility-lancool-207-top-bay.md#6-service-model-and-why-hot-swap-is-impossible).
 
 The saddle is why the model needs the adapter's **actual** body dimensions and **exit direction**
 before the pocket can be drawn — item 7 on the measurements list.

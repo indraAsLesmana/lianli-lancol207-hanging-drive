@@ -10,7 +10,7 @@ width slack. v2 (drives in Dell carriers) sees the length margin fall to **61 mm
 cable-routing problem over its own rear row — so v2 is feasible but should be built second.
 
 The one thing that is *not* possible in this bay is **hot-swap**, and that follows from the
-geometry, not from the design: see [§6](#6-service-model--why-this-cannot-be-hot-swap).
+geometry, not from the design: see [§6](#6-service-model-and-why-hot-swap-is-impossible).
 
 Research date: 2026-09-25. Every number is traced to a source or to arithmetic shown here.
 
@@ -197,7 +197,7 @@ there is no horizontal way out of a top bay.
 
 ---
 
-## 6. Service model — why this cannot be hot-swap
+## 6. Service model, and why hot-swap is impossible
 
 The bay is 60–70 mm tall, so every drive must lie **flat** (a drive standing on its 100.45 mm edge
 does not fit). In any 2-deep flat arrangement, **the front row blocks the rear row** — no carrier
